@@ -1,0 +1,16 @@
+name: Demo
+
+on:
+  push:
+  schedule:
+    - cron: '30 5 1 * *'
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo tbd
