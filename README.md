@@ -1,12 +1,10 @@
 # Demo
 
-A demo of reading, writing, and passing environment variables.
-
 Environment variables and their scopes work as you'd expect in GitHub Actions.
 
 They're also fairly self-contained, so any changes you make are isolated to the job you're in.
 
-One thing to keep in mind is that they're usually unavailable in the step in which they're set. Meaning, you'd typically have a step that sets the environment variable and a subsequent step that uses it.
+One thing that can cause confusion is the fact that environment variables defined within a step aren't accessible until the next step.
 
 ## Overview
 
