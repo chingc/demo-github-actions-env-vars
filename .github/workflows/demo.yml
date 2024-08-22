@@ -182,7 +182,7 @@ jobs:
 
       - name: Add PATH (takes effect in subsequent steps)
         run: |
-          echo "${HOME}/imaginary" >> ${GITHUB_PATH}
+          echo "${HOME}/imaginary" >> "${GITHUB_PATH}"
           echo "PATH is '${PATH}'"
 
       - name: Show updated PATH
