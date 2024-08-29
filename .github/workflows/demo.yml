@@ -12,11 +12,8 @@ env:
   MAR: 'March'
 
 jobs:
-
   read_one:
-
     runs-on: ubuntu-latest
-
     env:
       RED: 'FF0000'
       GREEN: '00FF00'
@@ -56,7 +53,6 @@ jobs:
           echo "THREE is '${THREE}'"
 
   read_two:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -75,7 +71,6 @@ jobs:
           echo "THREE is '${THREE}'"
 
   write_one:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -105,7 +100,6 @@ jobs:
           echo "MAR is '${MAR}'"
 
   write_two:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -116,7 +110,6 @@ jobs:
           echo "MAR is '${MAR}'"
 
   pass_one:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -141,9 +134,7 @@ jobs:
         run: echo "JSON_RESPONSE is '${JSON_RESPONSE}'"
 
   pass_two:
-
     runs-on: ubuntu-latest
-
     outputs:
       FOO: ${{ steps.foobar.outputs.FOO }}
       BAR: ${{ steps.foobar.outputs.BAR }}
@@ -161,9 +152,7 @@ jobs:
           echo "BAR=123" >> "${GITHUB_OUTPUT}"
 
   pass_three:
-
     runs-on: ubuntu-latest
-
     needs: pass_two
 
     steps:
@@ -173,7 +162,6 @@ jobs:
           echo "BAR is '${{ needs.pass_two.outputs.BAR }}'"
 
   path_one:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -189,7 +177,6 @@ jobs:
         run: echo "PATH is '${PATH}'"
 
   path_two:
-
     runs-on: ubuntu-latest
 
     steps:
